@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.setAttribute('data-task-id', task.id);
   
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = '  X';
+        deleteButton.textContent = ' X';
         deleteButton.addEventListener('click', () => {
           const taskId = parseInt(listItem.getAttribute('data-task-id'));
           deleteTask(taskId);
