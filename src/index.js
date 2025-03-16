@@ -1,14 +1,13 @@
-// your code here
-  document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', () => {
     let tasks = [
-      { id: 1, title: 'Feed cat', priority: 'high' },
-      { id: 2, title: 'Task 2', priority: 'medium' },
-      { id: 3, title: 'Task 3', priority: 'low' }
+      { id: 1, title: 'Grocery shopping', priority: 'high' },
+      { id: 2, title: 'Complete assignments', priority: 'medium' },
+      { id: 3, title: 'Update Journal', priority: 'low' }
     ];
   
     function suppressDefaultAction() {
       const form = document.getElementById('create-task-form');
-  
       form.addEventListener('submit', function(event) {
         event.preventDefault();
   
@@ -47,7 +46,7 @@
         listItem.setAttribute('data-task-id', task.id);
   
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'x';
+        deleteButton.textContent = '  X';
         deleteButton.addEventListener('click', () => {
           const taskId = parseInt(listItem.getAttribute('data-task-id'));
           deleteTask(taskId);
@@ -58,4 +57,4 @@
       });
     }
     renderTasks();
-  })
+  });
